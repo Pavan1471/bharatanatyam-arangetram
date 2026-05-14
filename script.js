@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================
        Livestream Countdown Timer
        ========================================== */
-    // Set event date (e.g., Sept 15, 2026, 15:30:00)
-    const eventDate = new Date("September 15, 2026 15:30:00").getTime();
+    // Set event date (June 5, 2026 17:00:00)
+    const eventDate = new Date("June 5, 2026 17:00:00").getTime();
     
     const countdownElement = document.getElementById('countdown');
 
