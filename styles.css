@@ -37,7 +37,8 @@ body {
     background-color: var(--clr-ivory);
     color: var(--clr-black);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100vh;
 }
 
 /* ==========================================================================
@@ -88,6 +89,33 @@ h6 {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* SPA Pages */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.page {
+    display: none;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.page.active {
+    display: block;
+    animation: fadeInPage 0.5s ease forwards;
+}
+
+.hero.page.active {
+    display: flex;
+    animation: fadeInPage 0.5s ease forwards;
 }
 
 .section {
@@ -306,8 +334,16 @@ nav.scrolled .hamburger span {
     background-image: url('assets/hero-background.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     z-index: -2;
     animation: zoomOutBg 20s infinite alternate linear;
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        /* On mobile, center top usually prevents heads from getting cut off */
+        background-position: center top;
+    }
 }
 
 @keyframes zoomOutBg {
@@ -383,18 +419,8 @@ nav.scrolled .hamburger span {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--clr-ivory);
-    opacity: 0.7;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    display: none;
+    /* Hidden since we use pages instead of scroll */
 }
 
 .mouse {
@@ -550,9 +576,13 @@ nav.scrolled .hamburger span {
     align-items: center;
 }
 
-.journey-image,
-.school-image {
-    height: 500px;
+.journey-image img,
+.school-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    background: transparent;
 }
 
 .journey-text h3,
@@ -593,14 +623,7 @@ nav.scrolled .hamburger span {
 }
 
 .guru-portrait-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid var(--clr-maroon);
-    z-index: 1;
+    display: none;
 }
 
 .guru-portrait-frame {
@@ -612,7 +635,8 @@ nav.scrolled .hamburger span {
 .guru-portrait-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: transparent;
 }
 
 /* ==========================================================================
@@ -699,29 +723,6 @@ nav.scrolled .hamburger span {
 }
 
 /* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-    background-color: var(--clr-maroon-dark);
-    color: var(--clr-ivory);
-    text-align: center;
-    padding: 4rem 0 2rem 0;
-}
-
-.footer-content h3 {
-    font-family: var(--font-cinzel);
-    color: var(--clr-gold);
-    letter-spacing: 4px;
-    font-size: 1.8rem;
-}
-
-.copyright {
-    margin-top: 3rem;
-    font-size: 0.85rem;
-    opacity: 0.6;
-}
-
-/* ==========================================================================
    Gallery Section
    ========================================================================== */
 .gallery-grid {
@@ -773,22 +774,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* ==========================================================================
-   Animations & Scroll Reveals
-   ========================================================================== */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
-    visibility: hidden;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, visibility;
-}
-
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-}
+/* Removed fade-in-section to fix SPA visibility issues */
 
 /* Staggered on load for hero elements */
 .slide-up {

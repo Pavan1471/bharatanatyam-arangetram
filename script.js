@@ -23,12 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links li a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
+    // Normal links will just work, no SPA logic needed.
 
     /* ==========================================
        Intersection Observer for Scroll Reveals
