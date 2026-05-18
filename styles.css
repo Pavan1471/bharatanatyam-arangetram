@@ -231,6 +231,20 @@ nav.scrolled {
     padding: 1rem 0;
 }
 
+nav.nav-active {
+    background-color: var(--clr-ivory);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+}
+
+nav.nav-active .nav-logo {
+    color: var(--clr-maroon);
+}
+
+nav.nav-active .hamburger span {
+    background-color: var(--clr-maroon);
+}
+
 .nav-container {
     width: 90%;
     max-width: 1400px;
@@ -869,27 +883,58 @@ nav.scrolled .hamburger span {
         text-align: center;
         gap: 0;
         max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
+        overflow-y: auto;
+        transition: max-height 0.4s ease-in-out;
         margin-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        
+        /* Premium custom scrollbar styling */
+        scrollbar-width: thin;
+        scrollbar-color: var(--clr-gold) transparent;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background-color: var(--clr-gold);
+        border-radius: 2px;
     }
 
     .nav-links.active {
-        max-height: 400px;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        max-height: calc(100vh - 85px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links li {
-        padding: 1.5rem 0;
+        padding: 1.15rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .nav-links li a {
         color: var(--clr-maroon);
+        font-weight: 500;
+        display: block;
+        width: 100%;
     }
 
     .hamburger {
         display: flex;
+    }
+
+    /* Premium Hamburger Animation to "X" */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 }
 
