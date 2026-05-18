@@ -248,6 +248,9 @@ nav.scrolled {
     color: var(--clr-ivory);
     letter-spacing: 4px;
     transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 nav.scrolled .nav-logo {
@@ -257,18 +260,20 @@ nav.scrolled .nav-logo {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.2rem;
+    margin-left: auto;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: var(--clr-ivory);
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
     transition: var(--transition-smooth);
+    white-space: nowrap;
 }
 
 nav.scrolled .nav-links li a {
@@ -310,6 +315,20 @@ nav.scrolled .nav-links li a {
 
 nav.scrolled .hamburger span {
     background-color: var(--clr-maroon);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
 }
 
 /* ==========================================================================
@@ -839,7 +858,7 @@ nav.scrolled .hamburger span {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .nav-links {
         position: absolute;
         top: 100%;
@@ -852,6 +871,7 @@ nav.scrolled .hamburger span {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease;
+        margin-left: 0;
     }
 
     .nav-links.active {
@@ -871,7 +891,9 @@ nav.scrolled .hamburger span {
     .hamburger {
         display: flex;
     }
+}
 
+@media (max-width: 768px) {
     .gallery-grid {
         column-count: 1;
     }
@@ -892,5 +914,23 @@ nav.scrolled .hamburger span {
 
     .cd-box span {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links li a {
+        font-size: 0.8rem;
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .menu-logo {
+        height: 35px;
     }
 }
