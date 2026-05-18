@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('nav-active');
+        hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
 
