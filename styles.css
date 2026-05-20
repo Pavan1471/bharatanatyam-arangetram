@@ -80,6 +80,14 @@ h6 {
     background-color: var(--clr-gold);
 }
 
+.title-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 1rem;
+    display: block;
+}
+
 .center-margin {
     margin: 1.5rem auto;
 }
@@ -609,13 +617,24 @@ nav.scrolled .hamburger span {
     align-items: center;
 }
 
+
 .journey-image img,
 .school-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
     border-radius: 4px;
     background: transparent;
+    display: block;
+}
+
+.school-logo {
+    width: 150px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 .journey-text h3,
@@ -861,10 +880,24 @@ nav.scrolled .hamburger span {
 
     .journey-image,
     .school-image,
-    .guru-portrait-frame {
-        height: 400px;
+    .guru-portrait-wrapper {
         order: -1;
         /* image on top on mobile */
+    }
+
+    .journey-image,
+    .school-image,
+    .guru-portrait-frame {
+        height: auto;
+    }
+
+    .school-image {
+        align-items: center;
+        text-align: center;
+    }
+
+    .school-logo {
+        margin: 0 auto 1.5rem auto !important;
     }
 
     .hero-title {
@@ -948,17 +981,40 @@ nav.scrolled .hamburger span {
     }
 
     .countdown {
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        max-width: 450px;
+        margin: 2rem auto;
     }
 
     .cd-box {
-        min-width: 100px;
-        padding: 1rem;
+        min-width: unset;
+        padding: 0.75rem 0.25rem;
     }
 
     .cd-box span {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .cd-box p {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+
+    .school-layout,
+    .journey-content {
+        gap: 2rem;
+    }
+
+    .school-image,
+    .journey-image {
+        height: auto;
+    }
+
+    .school-text,
+    .journey-text {
+        padding-top: 1rem;
     }
 }
 
