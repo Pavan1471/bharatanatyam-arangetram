@@ -1000,7 +1000,7 @@ nav.scrolled .hamburger span {
 
 @media (max-width: 480px) {
     :root {
-        --section-pad-y: 3rem;
+        --section-pad-y: 4rem;
     }
 
     .section {
