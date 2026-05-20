@@ -37,8 +37,8 @@ body {
     background-color: var(--clr-ivory);
     color: var(--clr-black);
     line-height: 1.6;
-    overflow: hidden;
-    height: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 /* ==========================================================================
@@ -995,6 +995,45 @@ nav.scrolled .hamburger span {
 
     .hamburger.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-pad-y: 3rem;
+    }
+
+    .section {
+        padding: var(--section-pad-y) 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .event-card {
+        padding: 1.25rem;
+    }
+
+    .timeline .content h4 {
+        font-size: 1rem;
+    }
+
+    .timeline .content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .nav-container {
+        width: 95%;
+        padding: 0 0.5rem;
     }
 }
 
