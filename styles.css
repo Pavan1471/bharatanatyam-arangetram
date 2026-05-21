@@ -107,6 +107,17 @@ h6 {
 
     to {
         opacity: 1;
+
+@media (min-width: 769px) and (max-width: 1300px) {
+    .guru-portrait-frame img {
+        display: block;
+        margin: 0 auto;
+        /* width: 100%; */
+        max-width: 900px;
+        max-height: 1000px;
+        /* object-fit: cover; */
+    }
+}
     }
 }
 
@@ -649,7 +660,7 @@ nav.scrolled .hamburger span {
 .school-image img {
     width: 100%;
     height: auto;
-    max-height: 550px;
+    max-height: 750px;
     object-fit: contain;
     border-radius: 4px;
     background: transparent;
@@ -708,7 +719,7 @@ nav.scrolled .hamburger span {
 .guru-portrait-frame {
     position: relative;
     z-index: 2;
-    height: 500px;
+    height: 750px;
 }
 
 .guru-portrait-frame img {
@@ -716,6 +727,13 @@ nav.scrolled .hamburger span {
     height: 100%;
     object-fit: contain;
     background: transparent;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .guru-portrait-frame {
+        height: 920px;
+        width: 500px;
+    }
 }
 
 /* ==========================================================================
