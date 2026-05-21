@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================
-       Navbar Scroll Effect
+       Navbar Scroll Effect (disabled)
+       Keeping navbar expanded on scroll across pages
        ========================================== */
     const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    // Collapse-on-scroll behavior intentionally disabled.
+    // To re-enable, restore a scroll listener that toggles the 'scrolled' class.
 
     /* ==========================================
        Mobile Hamburger Menu
