@@ -1119,3 +1119,272 @@ nav.scrolled .hamburger span {
         height: 35px;
     }
 }
+
+/* ==========================================================================
+   Artists Page Styles
+   ========================================================================== */
+
+/* Content Wrapper */
+.content-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 0;
+    min-height: 100vh;
+}
+
+.artists-page {
+    background-color: var(--clr-ivory);
+    padding-top: 120px;
+}
+
+/* Section Title */
+.section-title {
+    margin-bottom: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title h1 {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--clr-maroon);
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: var(--clr-bronze);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Artists Grid Layout */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Artist Card */
+.artist-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(112, 23, 67, 0.08);
+    transition: all var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.artist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(112, 23, 67, 0.15);
+}
+
+/* Artist Image Container */
+.artist-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background-color: var(--clr-sandalwood);
+    position: relative;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform var(--transition-smooth);
+}
+
+.artist-card:hover .artist-image img {
+    transform: scale(1.05);
+}
+
+/* Artist Content */
+.artist-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.artist-content h2 {
+    font-size: 1.6rem;
+    color: var(--clr-maroon);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+}
+
+.artist-role {
+    font-size: 0.95rem;
+    color: var(--clr-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-cinzel);
+}
+
+.artist-bio {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--clr-black);
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.artist-highlights {
+    font-size: 0.9rem;
+    color: var(--clr-bronze);
+    line-height: 1.7;
+    border-left: 3px solid var(--clr-gold);
+    padding-left: 1.2rem;
+    font-style: italic;
+    margin-top: auto;
+}
+
+/* Awards List */
+.artist-awards {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.artist-awards li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.7rem;
+    position: relative;
+    color: var(--clr-black);
+}
+
+.artist-awards li:before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: var(--clr-gold);
+    font-weight: bold;
+}
+
+/* Responsive Design - Tablets */
+@media (max-width: 1024px) {
+    .artists-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .content-wrapper {
+        padding: 4rem 0;
+    }
+
+    .section-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .artist-content {
+        padding: 2rem;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .artists-page {
+        padding-top: 100px;
+    }
+
+    .content-wrapper {
+        width: 95%;
+        padding: 3rem 0;
+    }
+
+    .section-title h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .decorative-separator {
+        width: 50px;
+    }
+
+    .artists-grid {
+        gap: 2rem;
+    }
+
+    .artist-content {
+        padding: 1.5rem;
+    }
+
+    .artist-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .artist-bio {
+        font-size: 0.9rem;
+    }
+
+    .artist-highlights {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+    .artists-page {
+        padding-top: 80px;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .section-title h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .section-title p {
+        font-size: 0.95rem;
+    }
+
+    .artists-grid {
+        gap: 1.5rem;
+    }
+
+    .artist-content {
+        padding: 1.2rem;
+    }
+
+    .artist-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .artist-role {
+        font-size: 0.85rem;
+    }
+
+    .artist-bio {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .artist-highlights {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+}
