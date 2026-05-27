@@ -285,6 +285,7 @@ nav.nav-active .hamburger span {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-right: 1rem;
 }
 
 nav.scrolled .nav-logo {
@@ -1377,6 +1378,207 @@ nav.scrolled .hamburger span {
     .artist-role {
         font-size: 0.85rem;
     }
+}
+
+/* ==========================================================================
+   Program Page Styles
+   ========================================================================== */
+.program-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: rgba(112, 23, 67, 0.05);
+    border-left: 4px solid var(--clr-gold);
+    border-radius: 4px;
+}
+
+.program-notice {
+    font-size: 1.05rem;
+    color: var(--clr-maroon);
+    font-style: italic;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.program-items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.program-item {
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(112, 23, 67, 0.02) 100%);
+    border-radius: 8px;
+    border-left: 5px solid var(--clr-gold);
+    transition: var(--transition-smooth);
+}
+
+.program-item:hover {
+    box-shadow: 0 8px 24px rgba(112, 23, 67, 0.08);
+    transform: translateY(-4px);
+}
+
+.program-item-header {
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.program-item-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--clr-maroon);
+    letter-spacing: 0.5px;
+    flex: 1;
+}
+
+.program-divider {
+    flex-shrink: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clr-gold), transparent);
+    border-radius: 2px;
+}
+
+.program-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.program-item-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--clr-black);
+    margin: 0;
+}
+
+.program-details {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(112, 23, 67, 0.1);
+    font-size: 0.95rem;
+    color: var(--clr-bronze);
+    font-family: var(--font-cinzel);
+    letter-spacing: 0.3px;
+}
+
+.program-details strong {
+    color: var(--clr-maroon);
+    font-weight: 600;
+}
+
+/* Responsive Design - Program Page Tablets */
+@media (max-width: 1024px) {
+    .program-item {
+        padding: 2rem;
+    }
+
+    .program-item-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .program-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .program-divider {
+        width: 60px;
+    }
+}
+
+/* Responsive Design - Program Page Mobile */
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .program-intro {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .program-notice {
+        font-size: 1rem;
+    }
+
+    .program-items {
+        gap: 2rem;
+    }
+
+    .program-item {
+        padding: 1.5rem;
+        border-left-width: 4px;
+    }
+
+    .program-item-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .program-item-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .program-details {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive Design - Program Page Small Mobile */
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .program-intro {
+        padding: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .program-notice {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .program-items {
+        gap: 1.5rem;
+    }
+
+    .program-item {
+        padding: 1.2rem;
+        border-radius: 4px;
+    }
+
+    .program-item-header {
+        gap: 1rem;
+    }
+
+    .program-item-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .program-divider {
+        width: 30px;
+        height: 2px;
+    }
+
+    .program-item-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .program-details {
+        font-size: 0.85rem;
+        padding-top: 0.8rem;
+    }
+}
 
     .artist-bio {
         font-size: 0.85rem;
